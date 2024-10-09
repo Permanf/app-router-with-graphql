@@ -1,4 +1,6 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -47,6 +49,9 @@ export default function Home() {
           >
             Read our docs
           </a>
+          <Link href={"/dashboard/products"}>
+            <Button className="bg-indigo-950 rounded-full px-14 py-6">Products</Button>
+          </Link>
         </div>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
