@@ -1,14 +1,7 @@
 // import Image from "next/image"
 import Link from "next/link"
 import {
-  Home,
-  LineChart,
-  Package,
-  Package2,
-  PanelLeft,
   Search,
-  ShoppingCart,
-  Users2,
 } from "lucide-react"
 import {
   Breadcrumb,
@@ -28,12 +21,12 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+// import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export function Header(){
     return(
         <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
-        <Sheet>
+        {/* <Sheet>
             <SheetTrigger asChild>
             <Button size="icon" variant="outline" className="sm:hidden">
                 <PanelLeft className="h-5 w-5" />
@@ -86,18 +79,18 @@ export function Header(){
                 </Link>
             </nav>
             </SheetContent>
-        </Sheet>
-        <Breadcrumb className="hidden md:flex">
+        </Sheet> */}
+        <Breadcrumb className="md:flex">
             <BreadcrumbList>
             <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                <Link href="#">Dashboard</Link>
+                <Link href="/dashboard">Dashboard</Link>
                 </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
                 <BreadcrumbLink asChild>
-                <Link href="#">Products</Link>
+                <Link href="/dashboard/products">Products</Link>
                 </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
@@ -106,8 +99,8 @@ export function Header(){
             </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>
-        <div className="relative ml-auto flex-1 md:grow-0">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
+        <div className="relative ml-auto w-44 flex bg-red-300">
+            <Search className="absolute left-2 top-1 w-4 text-muted-foreground" />
             <Input
             type="search"
             placeholder="Search..."

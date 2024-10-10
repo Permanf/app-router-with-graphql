@@ -1,13 +1,12 @@
 import Link from "next/link"
 import {
-  Home,
   LayoutDashboard,
   LineChart,
   LogIn,
   Package,
   Package2,
+  Section,
   Settings,
-  ShoppingCart,
   Users2,
 } from "lucide-react"
 import {
@@ -46,7 +45,7 @@ export function Sidebar(){
             <Tooltip>
                 <TooltipTrigger asChild>
                 <Link
-                    href="dashboard/products"
+                    href="/dashboard/products"
                     className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
                     <Package className="h-5 w-5" />
@@ -60,28 +59,28 @@ export function Sidebar(){
             <Tooltip>
                 <TooltipTrigger asChild>
                 <Link
-                    href="#"
+                    href="/dashboard/category"
                     className="flex h-9 w-9 items-center justify-center rounded-lg transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
-                    <ShoppingCart className="h-5 w-5" />
-                    <span className="sr-only">Orders</span>
+                    <Section className="h-5 w-5" />
+                    <span className="sr-only">Category</span>
                 </Link>
                 </TooltipTrigger>
-                <TooltipContent side="right">Orders</TooltipContent>
+                <TooltipContent side="right">Category</TooltipContent>
             </Tooltip>
             </TooltipProvider>
             <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
                 <Link
-                    href="#"
+                    href="/dashboard/users"
                     className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                 >
                     <Users2 className="h-5 w-5" />
-                    <span className="sr-only">Customers</span>
+                    <span className="sr-only">Users</span>
                 </Link>
                 </TooltipTrigger>
-                <TooltipContent side="right">Customers</TooltipContent>
+                <TooltipContent side="right">Users</TooltipContent>
             </Tooltip>
             </TooltipProvider>
             <TooltipProvider>
